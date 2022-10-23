@@ -9,21 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .foregroundColor(/*@START_MENU_TOKEN@*/.purple/*@END_MENU_TOKEN@*/)
-                .imageScale(.large)
+        VStack{
+            MapView()
+                .ignoresSafeArea(edges: .top)
+                .frame(height: 300)
+            CircleImageSwift()
+                .offset(y: -130)
+                .padding(.bottom, -130)
             VStack(alignment: .leading) {
                 HStack{
                     Text("Hey")
                         .font(.largeTitle)
                         .foregroundColor(Color.yellow)
-                    Spacer()
                     Text("Wassupp!")
                     Text(" and hello")
                 }
+                Divider()
+                Text("These are the boys")
             }
-            
+            .padding()
+            Spacer()
+        }
+    
         }
     }
     
@@ -32,4 +39,4 @@ struct ContentView: View {
             ContentView()
         }
     }
-}
+
